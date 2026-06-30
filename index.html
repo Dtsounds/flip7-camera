@@ -374,7 +374,7 @@ function updateModalHeader(i){
   var wrap=document.getElementById('modalAvatarWrap'),img=document.getElementById('modalAvatarImg');
   if(p.avatar){img.src=p.avatar;wrap.style.display='block';}else{wrap.style.display='none';}
   document.getElementById('modalName').textContent=p.name;
-  document.getElementById('modalSub').textContent='Round '+(p.scores.length+1)+' ÃÂ· Total: '+total(p);
+  document.getElementById('modalSub').textContent='Round '+(p.scores.length+1)+' ÃÂÃÂ· Total: '+total(p);
 }
 
 function openModal(i){
@@ -467,7 +467,7 @@ function analyzeWithGemini(){
   }
   document.getElementById('geminiLoading').style.display='flex';
   document.getElementById('cardResults').style.display='none';
-  var prompt='You are analyzing a photo of Flip 7 playing cards laid out left to right in the order they were dealt to the player.\n\nIdentify each card in sequence from left to right. Cards can be:\n- Number cards: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12\n- Modifier cards: +2, +4, x2\n- Action cards with no point value: Freeze, Flip Three, Second Chance\n\nReturn ONLY a valid JSON object in this exact format, no other text:\n{"cards": ["3", "+4", "x2", "5"], "notes": ""}\n\nList only the cards you can clearly identify. Use the string values exactly as shown above.';
+  var prompt='You are analyzing a photo of Flip 7 playing cards laid out left to right in the order they were dealt to the player.\n\nIdentify each card in sequence from left to right. Cards can be:\n- Number cards: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12\n- Modifier cards: +2, +4, +6, +8, +10, x2\n- Action cards with no point value: Freeze, Flip Three, Second Chance\n\nReturn ONLY a valid JSON object in this exact format, no other text:\n{"cards": ["3", "+4", "x2", "5"], "notes": ""}\n\nList only the cards you can clearly identify. Use the string values exactly as shown above.';
   var body=JSON.stringify({contents:[{parts:[{text:prompt},{inline_data:{mime_type:currentPhotoMime,data:currentPhotoBase64}}]}]});
   fetch('https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key='+key,{method:'POST',headers:{'Content-Type':'application/json'},body:body})
   .then(function(r){return r.json();})
@@ -509,6 +509,9 @@ function calculateFlip7Score(cards){
     if(NUM_CARDS.indexOf(c)>=0){numCount++;score+=c==='0'?1:parseInt(c,10);}
     else if(c==='+2'){score+=2;}
     else if(c==='+4'){score+=4;}
+    else if(c==='+6'){score+=6;}
+    else if(c==='+8'){score+=8;}
+    else if(c==='+10'){score+=10;}
     else if(c==='x2'){score*=2;}
   }
   var flip7=numCount===7;
@@ -676,7 +679,7 @@ function checkWin(){
     document.documentElement.classList.add('barrel-roll');
     setTimeout(function(){document.documentElement.classList.remove('barrel-roll');},1500);
     document.getElementById('winName').textContent=best.name+' WINS!';
-    document.getElementById('winMsg').textContent=total(best)+' points Ã°ÂÂÂ¥';
+    document.getElementById('winMsg').textContent=total(best)+' points ÃÂ°ÃÂÃÂÃÂ¥';
     document.getElementById('winBanner').classList.add('show');
     confetti();
   }
@@ -684,7 +687,7 @@ function checkWin(){
 function hideWin(){document.getElementById('winBanner').classList.remove('show');}
 function confetti(){
   var banner=document.getElementById('winBanner');
-  var emojis=['Ã°ÂÂÂ','Ã¢ÂÂ¨','Ã°ÂÂÂ','Ã¢Â­Â','Ã°ÂÂÂ','Ã°ÂÂÂ'];
+  var emojis=['ÃÂ°ÃÂÃÂÃÂ','ÃÂ¢ÃÂÃÂ¨','ÃÂ°ÃÂÃÂÃÂ','ÃÂ¢ÃÂ­ÃÂ','ÃÂ°ÃÂÃÂÃÂ','ÃÂ°ÃÂÃÂÃÂ'];
   for(var i=0;i<40;i++){
     var s=document.createElement('div');s.className='confetti';
     s.textContent=emojis[Math.floor(Math.random()*emojis.length)];
