@@ -730,23 +730,24 @@ showManualFallback();
 }
 
 function calculateCardScore(cards){
-let running=0;
+let sum=0,x2Count=0;
 for(const card of cards){
 const n=parseInt(card);
 if(!isNaN(n)&&NUM_CARDS.includes(card)){
-running+=(n===0?1:n);
-}else if(card==='+2')running+=2;
-else if(card==='+4')running+=4;
-else if(card==='+6')running+=6;
-else if(card==='+8')running+=8;
-else if(card==='+10')running+=10;
-else if(card==='x2')running*=2;
+sum+=(n===0?1:n);
+}else if(card==='+2')sum+=2;
+else if(card==='+4')sum+=4;
+else if(card==='+6')sum+=6;
+else if(card==='+8')sum+=8;
+else if(card==='+10')sum+=10;
+else if(card==='x2')x2Count++;
 // action cards = 0, skip
 }
+let total=sum*Math.pow(2,x2Count);
 // Flip 7 bonus: exactly 7 number cards
 const numCount=cards.filter(c=>NUM_CARDS.includes(c)).length;
-if(numCount===7)running+=15;
-return running;
+if(numCount===7)total+=15;
+return total;
 }
 
 function showScanResult(cards){
