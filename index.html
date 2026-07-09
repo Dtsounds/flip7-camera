@@ -39,32 +39,59 @@ letter-spacing: 1px;
 .subtitle { text-align: center; color: var(--purple); font-size: 16px; margin-bottom: 20px; font-weight: 600; }
 #setup { max-width: 520px; margin: 0 auto; }
 .name-row { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
-.name-num { width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 20px; flex-shrink: 0; color: #1a1040; }
-.name-row input { flex: 1; font-size: 22px; padding: 14px 16px; border-radius: 14px; border: 2px solid rgba(255,255,255,0.25); background: rgba(255,255,255,0.1); color: var(--text); outline: none; min-width: 0; }
+.name-num {
+width: 44px; height: 44px; border-radius: 50%;
+display: flex; align-items: center; justify-content: center;
+font-weight: 800; font-size: 20px; flex-shrink: 0; color: #1a1040;
+}
+.name-row input {
+flex: 1; font-size: 22px; padding: 14px 16px; border-radius: 14px;
+border: 2px solid rgba(255,255,255,0.25); background: rgba(255,255,255,0.1);
+color: var(--text); outline: none; min-width: 0;
+}
 .name-row input:focus { border-color: var(--gold); background: rgba(255,255,255,0.16); }
 .name-row input::placeholder { color: rgba(255,255,255,0.4); }
-.avatar-wrap { position: relative; width: 44px; height: 44px; flex-shrink: 0; cursor: pointer; }
-.avatar-wrap input[type="file"] { position: absolute; inset: 0; opacity: 0; width: 100%; height: 100%; cursor: pointer; z-index: 2; }
-.avatar-circle { width: 44px; height: 44px; border-radius: 50%; border: 2px dashed rgba(255,255,255,0.4); display: flex; align-items: center; justify-content: center; font-size: 18px; background: rgba(255,255,255,0.08); overflow: hidden; transition: border-color 0.2s; }
-.avatar-circle.has-avatar { border: 2.5px solid var(--gold); }
-.avatar-circle.has-avatar .avatar-icon { display: none; }
-.avatar-circle img.avatar-img { display: none; width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
-.avatar-circle.has-avatar img.avatar-img { display: block; }
-.big-btn { display: block; width: 100%; padding: 20px; font-size: 24px; font-weight: 800; border: none; border-radius: 18px; cursor: pointer; margin-top: 16px; color: #1a1040; background: linear-gradient(90deg, var(--gold), #ffb53f); box-shadow: 0 6px 0 rgba(0,0,0,0.3); transition: transform 0.08s; }
+.avatar-wrap{position:relative;width:44px;height:44px;flex-shrink:0;cursor:pointer;}
+.avatar-wrap input[type="file"]{position:absolute;inset:0;opacity:0;width:100%;height:100%;cursor:pointer;z-index:2;}
+.avatar-circle{width:44px;height:44px;border-radius:50%;border:2px dashed rgba(255,255,255,0.4);display:flex;align-items:center;justify-content:center;font-size:18px;background:rgba(255,255,255,0.08);overflow:hidden;transition:border-color 0.2s;}
+.avatar-circle.has-avatar{border:2.5px solid var(--gold);}
+.avatar-circle.has-avatar .avatar-icon{display:none;}
+.avatar-circle img.avatar-img{display:none;width:100%;height:100%;object-fit:cover;border-radius:50%;}
+.avatar-circle.has-avatar img.avatar-img{display:block;}
+.big-btn {
+display: block; width: 100%; padding: 20px; font-size: 24px; font-weight: 800;
+border: none; border-radius: 18px; cursor: pointer; margin-top: 16px; color: #1a1040;
+background: linear-gradient(90deg, var(--gold), #ffb53f);
+box-shadow: 0 6px 0 rgba(0,0,0,0.3); transition: transform 0.08s;
+}
 .big-btn:active { transform: translateY(4px); box-shadow: 0 2px 0 rgba(0,0,0,0.3); }
 #game { display: none; max-width: 520px; margin: 0 auto; }
 .round-bar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; flex-wrap: wrap; gap: 8px; }
-.round-label { font-size: 22px; font-weight: 800; color: var(--gold); background: rgba(255,210,63,0.12); padding: 8px 18px; border-radius: 999px; border: 2px solid rgba(255,210,63,0.4); }
+.round-label {
+font-size: 22px; font-weight: 800; color: var(--gold);
+background: rgba(255,210,63,0.12); padding: 8px 18px; border-radius: 999px;
+border: 2px solid rgba(255,210,63,0.4);
+}
 .ctrl-btns { display: flex; gap: 8px; flex-wrap: wrap; }
-.ctrl-btn { padding: 12px 18px; font-size: 17px; font-weight: 700; border: none; border-radius: 12px; cursor: pointer; color: #fff; box-shadow: 0 4px 0 rgba(0,0,0,0.3); transition: transform 0.08s; }
+.ctrl-btn {
+padding: 10px 14px; font-size: 16px; font-weight: 700; border: none; border-radius: 12px;
+cursor: pointer; color: #fff; box-shadow: 0 4px 0 rgba(0,0,0,0.3); transition: transform 0.08s;
+}
 .ctrl-btn:active { transform: translateY(3px); box-shadow: 0 1px 0 rgba(0,0,0,0.3); }
 .ctrl-btn:disabled { opacity: 0.35; cursor: default; }
 #undoBtn { background: linear-gradient(90deg, #ff9a3f, #ff5e7e); }
 #undoRoundBtn { background: linear-gradient(90deg, #b388ff, #7c4dff); }
 #newGameBtn { background: linear-gradient(90deg, #4cc9f0, #00b4d8); }
-#settingsBtn { background: rgba(255,255,255,0.15); font-size: 20px; padding: 10px 14px; }
+#historyBtn { background: linear-gradient(90deg, #3ddc84, #1fa860); }
+#settingsBtn { background: rgba(255,255,255,0.18); font-size: 18px; padding: 10px 12px; }
 .players { display: grid; grid-template-columns: 1fr; gap: 12px; }
-.player-card { display: flex; align-items: center; justify-content: space-between; padding: 18px 20px; border-radius: 18px; background: rgba(255,255,255,0.08); border: 3px solid transparent; cursor: pointer; transition: transform 0.08s, border-color 0.2s, background 0.2s; position: relative; overflow: hidden; }
+.player-card {
+display: flex; align-items: center; justify-content: space-between;
+padding: 18px 20px; border-radius: 18px; background: rgba(255,255,255,0.08);
+border: 3px solid transparent; cursor: pointer;
+transition: transform 0.08s, border-color 0.2s, background 0.2s;
+position: relative; overflow: hidden;
+}
 .player-card:active { transform: scale(0.97); }
 .player-card.leader { border-color: var(--gold); background: rgba(255,210,63,0.14); box-shadow: 0 0 18px rgba(255,210,63,0.35); }
 .player-card.scored-this-round { opacity: 0.55; }
@@ -77,62 +104,37 @@ letter-spacing: 1px;
 .pc-total { font-size: clamp(30px, 7vw, 42px); font-weight: 900; flex-shrink: 0; }
 .leader .pc-total { color: var(--gold); }
 .crown { font-size: 22px; margin-left: 6px; }
-/* OVERLAY */
+
+/* MODAL BASE */
 #overlay { display: none; position: fixed; inset: 0; background: rgba(10,5,30,0.85); z-index: 50; align-items: center; justify-content: center; padding: 16px; }
 #overlay.show { display: flex; }
 .modal { background: var(--card); border-radius: 24px; padding: 14px; width: 100%; max-width: 420px; border: 3px solid rgba(255,255,255,0.15); box-shadow: 0 20px 60px rgba(0,0,0,0.6); overflow-y: auto; max-height: 98vh; }
-.modal-avatar-wrap { text-align: center; margin-bottom: 6px; }
-.modal-avatar { width: 56px; height: 56px; border-radius: 50%; object-fit: cover; border: 2.5px solid var(--gold); }
+.modal-avatar-wrap{text-align:center;margin-bottom:6px;}
+.modal-avatar{width:56px;height:56px;border-radius:50%;object-fit:cover;border:2.5px solid var(--gold);}
 .modal-title { text-align: center; font-size: 20px; font-weight: 800; margin-bottom: 2px; }
 .modal-sub { text-align: center; color: var(--purple); font-weight: 600; margin-bottom: 8px; font-size: 13px; }
-.modal-toggle { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin-bottom: 10px; }
-.modal-toggle-btn { font-size: 15px; font-weight: 700; padding: 9px 4px; border: none; border-radius: 10px; cursor: pointer; color: rgba(255,255,255,0.5); background: rgba(255,255,255,0.08); transition: background 0.15s, color 0.15s; }
-.modal-toggle-btn.mtb-active { background: rgba(255,255,255,0.2); color: #fff; }
-/* STEP CHOICE */
-#stepChoice { display: flex; flex-direction: column; gap: 10px; }
-.choice-btn { width: 100%; padding: 22px 16px; font-size: 22px; font-weight: 800; border: none; border-radius: 16px; cursor: pointer; box-shadow: 0 5px 0 rgba(0,0,0,0.3); transition: transform 0.08s; }
-.choice-btn:active { transform: translateY(4px); box-shadow: 0 1px 0 rgba(0,0,0,0.3); }
-.choice-bust { background: linear-gradient(90deg, #ff5e7e, #e63956); color: #fff; }
-.choice-scan { background: linear-gradient(90deg, var(--gold), #ffb53f); color: #1a1040; }
-.choice-cancel { background: rgba(255,255,255,0.12); color: rgba(255,255,255,0.7); font-size: 17px; padding: 14px; }
-/* STEP CAMERA */
-#stepCamera { display: none; flex-direction: column; gap: 10px; }
-.camera-label { display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; padding: 18px; font-size: 20px; font-weight: 800; border: 3px dashed rgba(255,255,255,0.3); border-radius: 16px; cursor: pointer; background: rgba(255,255,255,0.06); color: #fff; transition: background 0.15s; }
-.camera-label:active { background: rgba(255,255,255,0.14); }
-#cameraFileInput { display: none; }
-#photoThumb { display: none; border-radius: 14px; overflow: hidden; max-height: 180px; text-align: center; }
-#photoThumb img { max-width: 100%; max-height: 160px; border-radius: 14px; object-fit: contain; display: block; margin: 0 auto; }
-.retake-btn { width: 100%; padding: 10px; font-size: 14px; font-weight: 700; border: none; border-radius: 10px; background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.7); cursor: pointer; margin-top: 6px; }
-#geminiLoading { display: none; align-items: center; justify-content: center; gap: 12px; padding: 16px; font-size: 15px; font-weight: 700; color: var(--blue); }
-.spinner { width: 28px; height: 28px; border: 3px solid rgba(76,201,240,0.25); border-top-color: var(--blue); border-radius: 50%; animation: spin 0.8s linear infinite; flex-shrink: 0; }
-@keyframes spin { to { transform: rotate(360deg); } }
-/* CARD RESULTS */
-#cardResults { display: none; flex-direction: column; gap: 10px; }
-.card-badges-wrap { display: flex; flex-wrap: wrap; gap: 7px; min-height: 44px; padding: 8px; background: rgba(0,0,0,0.2); border-radius: 14px; align-items: center; }
-.card-badge { display: inline-flex; align-items: center; gap: 5px; padding: 6px 10px; border-radius: 10px; font-weight: 900; font-size: 16px; color: #1a1040; cursor: default; box-shadow: 0 3px 0 rgba(0,0,0,0.25); }
-.badge-remove { background: rgba(0,0,0,0.2); border: none; border-radius: 6px; font-size: 13px; font-weight: 900; width: 22px; height: 22px; cursor: pointer; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-.badge-remove:active { background: rgba(0,0,0,0.4); }
-.no-cards-msg { color: rgba(255,255,255,0.45); font-size: 14px; font-style: italic; }
-.score-result-box { background: rgba(0,0,0,0.3); border-radius: 14px; padding: 10px 14px; text-align: center; }
-.score-result-num { font-size: 52px; font-weight: 900; color: var(--gold); line-height: 1; }
-.score-result-label { font-size: 12px; font-weight: 700; color: rgba(255,255,255,0.4); text-transform: uppercase; letter-spacing: 1px; margin-top: 2px; }
-.flip7-badge { background: linear-gradient(90deg, var(--gold), #ffb53f); color: #1a1040; font-size: 13px; font-weight: 900; padding: 4px 12px; border-radius: 999px; display: inline-block; margin-top: 4px; }
-.add-card-section { }
-.add-card-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,0.35); margin-bottom: 6px; }
-.add-card-grid { display: flex; flex-wrap: wrap; gap: 5px; }
-.add-card-btn { padding: 7px 11px; border: none; border-radius: 9px; font-size: 14px; font-weight: 800; cursor: pointer; color: #1a1040; box-shadow: 0 2px 0 rgba(0,0,0,0.25); transition: transform 0.06s; }
-.add-card-btn:active { transform: scale(0.92); }
-.add-num { background: var(--gold); }
-.add-mod-plus { background: var(--blue); }
-.add-mod-x { background: var(--accent); color: #fff; }
-.add-action { background: var(--purple); color: #fff; }
-.confirm-score-btn { width: 100%; padding: 18px; font-size: 22px; font-weight: 800; border: none; border-radius: 16px; cursor: pointer; color: #0b3320; background: linear-gradient(90deg, var(--green), #1fa860); box-shadow: 0 5px 0 rgba(0,0,0,0.3); transition: transform 0.08s; }
-.confirm-score-btn:active { transform: translateY(4px); box-shadow: 0 1px 0 rgba(0,0,0,0.3); }
-.back-btn { width: 100%; padding: 12px; font-size: 15px; font-weight: 700; border: none; border-radius: 12px; background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.6); cursor: pointer; }
-/* SCOREBOARD */
+.modal-toggle{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:8px;}
+.modal-toggle-btn{font-size:16px;font-weight:800;padding:16px 6px;border-radius:14px;cursor:pointer;color:rgba(255,255,255,0.55);background:rgba(255,255,255,0.08);border:2.5px solid transparent;transition:background 0.15s,color 0.15s,border-color 0.15s;}
+.modal-toggle-btn.mtb-active{background:rgba(255,255,255,0.16);color:#fff;}
+#mtbScore.mtb-active{border-color:var(--gold);color:var(--gold);background:rgba(255,210,63,0.14);}
+#mtbScan.mtb-active{border-color:var(--blue);color:var(--blue);background:rgba(76,201,240,0.14);}
+.board-link{text-align:center;font-size:13px;font-weight:700;color:rgba(255,255,255,0.4);cursor:pointer;margin-bottom:10px;text-decoration:underline;text-underline-offset:3px;}
+.board-link.active{color:var(--purple);}
+
+/* SCORE PANEL */
+.score-display { text-align: center; font-size: 42px; font-weight: 900; background: rgba(0,0,0,0.3); border-radius: 12px; padding: 4px 8px; margin-bottom: 8px; min-height: 62px; color: var(--gold); letter-spacing: 2px; }
+.pad { display: grid; grid-template-columns: repeat(3, 1fr); gap: 7px; }
+.pad button { font-size: 22px; font-weight: 800; padding: 11px 0; border: none; border-radius: 12px; background: rgba(255,255,255,0.12); color: #fff; cursor: pointer; transition: transform 0.06s, background 0.15s; }
+.pad button:active { transform: scale(0.93); background: rgba(255,255,255,0.25); }
+.modal-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 7px; margin-top: 7px; }
+.bust-btn, .ok-btn, .cancel-btn { font-size: 17px; font-weight: 800; padding: 10px 0; border: none; border-radius: 12px; cursor: pointer; color: #fff; box-shadow: 0 3px 0 rgba(0,0,0,0.3); transition: transform 0.08s; }
+.bust-btn:active, .ok-btn:active, .cancel-btn:active { transform: translateY(2px); box-shadow: 0 1px 0 rgba(0,0,0,0.3); }
+.bust-btn { background: linear-gradient(90deg, #ff5e7e, #e63956); grid-column: 1 / -1; }
+.ok-btn { background: linear-gradient(90deg, #3ddc84, #1fa860); color: #0b3320; }
+.cancel-btn { background: rgba(255,255,255,0.15); }
 .modal-scoreboard { margin-top: 9px; padding-top: 8px; border-top: 1px solid rgba(255,255,255,0.12); }
 .modal-scoreboard-label { font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,0.35); text-align: center; margin-bottom: 5px; }
-.sb-row { display: flex; align-items: center; padding: 4px 8px; border-radius: 8px; margin-bottom: 2px; background: rgba(255,255,255,0.04); border: 2px solid transparent; }
+.sb-row { display: flex; align-items: center; padding: 4px 8px; border-radius: 8px; margin-bottom: 2px; background: rgba(255,255,255,0.04); border: 2px solid transparent; transition: background 0.15s; }
 .sb-row.sb-active { background: rgba(255,255,255,0.13); }
 .sb-dot { width: 18px; height: 18px; border-radius: 50%; flex-shrink: 0; margin-right: 9px; overflow: hidden; }
 .sb-dot img { width: 18px; height: 18px; border-radius: 50%; object-fit: cover; display: block; }
@@ -140,42 +142,116 @@ letter-spacing: 1px;
 .sb-row.sb-active .sb-name { color: #fff; }
 .sb-score { font-size: 16px; font-weight: 900; flex-shrink: 0; margin-left: 8px; color: rgba(255,255,255,0.55); }
 .sb-row.sb-active .sb-score { color: var(--gold); }
-/* LEADERBOARD */
-.lb-row { display: flex; align-items: center; padding: 9px 10px; border-radius: 12px; margin-bottom: 5px; background: rgba(255,255,255,0.06); border: 2px solid transparent; }
-.lb-row.lb-active { background: rgba(255,255,255,0.13); border-color: rgba(255,255,255,0.18); }
-.lb-row.lb-leader .lb-score { color: var(--gold); }
-.lb-rank { font-size: 12px; font-weight: 800; color: rgba(255,255,255,0.35); width: 22px; flex-shrink: 0; text-align: center; }
-.lb-dot { width: 34px; height: 34px; border-radius: 50%; flex-shrink: 0; margin: 0 10px; overflow: hidden; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 16px; color: #1a1040; }
-.lb-dot img { width: 34px; height: 34px; border-radius: 50%; object-fit: cover; display: block; }
-.lb-name { flex: 1; font-size: 15px; font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.lb-score { font-size: 20px; font-weight: 900; flex-shrink: 0; margin-left: 8px; }
-/* WIN */
-#winBanner { display: none; position: fixed; inset: 0; z-index: 100; background: rgba(10,5,30,0.92); align-items: center; justify-content: center; flex-direction: column; text-align: center; padding: 24px; }
+
+/* CAMERA / SCAN PANEL */
+#scanPanel { text-align: center; }
+.cam-container { position: relative; width: 100%; border-radius: 14px; overflow: hidden; background: #000; margin-bottom: 10px; }
+#camVideo { width: 100%; max-height: 220px; object-fit: cover; display: block; }
+#camCanvas { display: none; }
+.cam-btn {
+width: 100%; padding: 14px; font-size: 18px; font-weight: 800; border: none;
+border-radius: 14px; cursor: pointer; color: #fff; margin-bottom: 8px;
+box-shadow: 0 4px 0 rgba(0,0,0,0.3); transition: transform 0.08s;
+}
+.cam-btn:active { transform: translateY(3px); box-shadow: 0 1px 0 rgba(0,0,0,0.3); }
+#captureBtn { background: linear-gradient(90deg, #ff5e7e, #e63956); }
+#skipScanBtn { background: rgba(255,255,255,0.15); font-size: 14px; padding: 10px; }
+#scanStatus { font-size: 14px; font-weight: 600; color: var(--purple); min-height: 22px; margin-bottom: 6px; }
+.card-badges { display: flex; flex-wrap: wrap; gap: 5px; justify-content: center; margin-bottom: 8px; }
+.card-badge {
+display: inline-flex; align-items: center; justify-content: center;
+font-size: 14px; font-weight: 800; padding: 4px 10px; border-radius: 8px;
+color: #1a1040;
+}
+.badge-num { background: var(--gold); }
+.badge-plus { background: var(--green); }
+.badge-x2 { background: var(--blue); }
+.badge-action { background: rgba(255,255,255,0.3); color: #fff; }
+.scan-result-score { font-size: 38px; font-weight: 900; color: var(--gold); margin: 6px 0; }
+.scan-confirm-btns { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 6px; }
+.scan-confirm-btn { font-size: 16px; font-weight: 800; padding: 12px; border: none; border-radius: 12px; cursor: pointer; }
+.scan-confirm-btn.confirm { background: linear-gradient(90deg, #3ddc84, #1fa860); color: #0b3320; }
+.scan-confirm-btn.retry { background: rgba(255,255,255,0.15); color: #fff; }
+#manualFallback { margin-top: 10px; padding-top: 10px; border-top: 1px solid rgba(255,255,255,0.12); }
+.mf-label { font-size: 13px; color: rgba(255,255,255,0.55); margin-bottom: 6px; font-weight: 600; }
+
+/* LEADERBOARD PANEL */
+.lb-row{display:flex;align-items:center;padding:9px 10px;border-radius:12px;margin-bottom:5px;background:rgba(255,255,255,0.06);border:2px solid transparent;}
+.lb-row.lb-active{background:rgba(255,255,255,0.13);border-color:rgba(255,255,255,0.18);}
+.lb-row.lb-leader .lb-score{color:var(--gold);}
+.lb-rank{font-size:12px;font-weight:800;color:rgba(255,255,255,0.35);width:22px;flex-shrink:0;text-align:center;}
+.lb-dot{width:34px;height:34px;border-radius:50%;flex-shrink:0;margin:0 10px;overflow:hidden;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:16px;color:#1a1040;}
+.lb-dot img{width:34px;height:34px;border-radius:50%;object-fit:cover;display:block;}
+.lb-name{flex:1;font-size:15px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.lb-score{font-size:20px;font-weight:900;flex-shrink:0;margin-left:8px;}
+
+/* WIN BANNER */
+#winBanner { display: none; position: fixed; inset: 0; z-index: 100; background: rgba(10,5,30,0.92); align-items: center; justify-content: center; flex-direction: column; text-align: center; padding: 24px; overflow-y: auto; }
 #winBanner.show { display: flex; }
 .win-trophy { font-size: 90px; animation: bounce 1s infinite alternate ease-in-out; }
 @keyframes bounce { from { transform: translateY(0); } to { transform: translateY(-18px); } }
 .win-name { font-size: clamp(40px, 10vw, 72px); font-weight: 900; background: linear-gradient(90deg, var(--gold), var(--accent), var(--blue), var(--green)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; margin: 12px 0 4px; }
-.win-msg { font-size: 26px; font-weight: 700; color: var(--gold); margin-bottom: 28px; }
+.win-msg { font-size: 26px; font-weight: 700; color: var(--gold); margin-bottom: 20px; }
+.win-final-lb { width: 100%; max-width: 380px; margin-bottom: 20px; }
+.win-lb-title { font-size: 12px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,0.35); margin-bottom: 8px; }
 .win-btns { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
 .win-btns button { font-size: 22px; font-weight: 800; padding: 18px 30px; border: none; border-radius: 16px; cursor: pointer; color: #1a1040; box-shadow: 0 5px 0 rgba(0,0,0,0.35); }
 .win-btns .again { background: linear-gradient(90deg, var(--gold), #ffb53f); }
 .win-btns .keep { background: rgba(255,255,255,0.85); }
-.confetti { position: absolute; top: -20px; font-size: 28px; animation: fall linear forwards; }
+.confetti { position: absolute; top: -20px; font-size: 28px; animation: fall linear forwards; pointer-events: none; }
 @keyframes fall { to { transform: translateY(110vh) rotate(720deg); opacity: 0.7; } }
-@keyframes barrelRoll { 0% { transform: rotate(0deg) scale(1); } 50% { transform: rotate(360deg) scale(0.82); } 100% { transform: rotate(720deg) scale(1); } }
+@keyframes barrelRoll {
+0% { transform: rotate(0deg) scale(1); }
+50% { transform: rotate(360deg) scale(0.82); }
+100% { transform: rotate(720deg) scale(1); }
+}
 html.barrel-roll { animation: barrelRoll 1.4s cubic-bezier(0.4, 0.0, 0.2, 1) forwards; transform-origin: center center; }
-/* SETTINGS */
-#settingsOverlay { display: none; position: fixed; inset: 0; background: rgba(10,5,30,0.85); z-index: 60; align-items: center; justify-content: center; padding: 16px; }
+
+/* HISTORY OVERLAY */
+#historyOverlay { display: none; position: fixed; inset: 0; z-index: 60; background: rgba(10,5,30,0.9); overflow-y: auto; padding: 16px; }
+#historyOverlay.show { display: block; }
+.history-modal { background: var(--card); border-radius: 24px; padding: 18px; max-width: 520px; margin: 0 auto; border: 3px solid rgba(255,255,255,0.15); }
+.history-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
+.history-title { font-size: 22px; font-weight: 800; color: var(--gold); }
+.history-close { background: rgba(255,255,255,0.12); border: none; color: #fff; font-size: 22px; width: 40px; height: 40px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; }
+.history-round { border-radius: 16px; background: rgba(255,255,255,0.06); border: 2px solid rgba(255,255,255,0.1); margin-bottom: 12px; overflow: hidden; }
+.history-round-header { display: flex; justify-content: space-between; align-items: center; padding: 12px 16px; cursor: pointer; background: rgba(255,255,255,0.04); }
+.history-round-label { font-size: 16px; font-weight: 800; color: var(--gold); }
+.history-round-toggle { font-size: 18px; color: rgba(255,255,255,0.5); }
+.history-round-body { padding: 12px 16px; display: none; }
+.history-round-body.open { display: block; }
+.history-player-row { display: flex; align-items: flex-start; gap: 10px; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.07); }
+.history-player-row:last-child { border-bottom: none; }
+.hist-dot { width: 34px; height: 34px; border-radius: 50%; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 15px; color: #1a1040; overflow: hidden; }
+.hist-dot img { width: 34px; height: 34px; object-fit: cover; border-radius: 50%; }
+.hist-info { flex: 1; min-width: 0; }
+.hist-name { font-size: 14px; font-weight: 800; margin-bottom: 4px; }
+.hist-cards { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 4px; }
+.hist-score { font-size: 13px; color: rgba(255,255,255,0.6); font-weight: 700; }
+.hist-score-val { color: var(--gold); }
+.hist-bust { color: var(--accent); }
+.hist-photo { width: 54px; height: 54px; border-radius: 8px; object-fit: cover; flex-shrink: 0; cursor: pointer; border: 2px solid rgba(255,255,255,0.2); }
+.hist-photo:hover { border-color: var(--gold); }
+.no-history { text-align: center; color: rgba(255,255,255,0.4); padding: 40px 20px; font-size: 16px; }
+
+/* PHOTO LIGHTBOX */
+#photoLightbox { display: none; position: fixed; inset: 0; z-index: 200; background: rgba(0,0,0,0.92); align-items: center; justify-content: center; cursor: pointer; }
+#photoLightbox.show { display: flex; }
+#lightboxImg { max-width: 95vw; max-height: 90vh; border-radius: 12px; object-fit: contain; }
+
+/* SETTINGS OVERLAY */
+#settingsOverlay { display: none; position: fixed; inset: 0; z-index: 70; background: rgba(10,5,30,0.9); align-items: center; justify-content: center; padding: 16px; }
 #settingsOverlay.show { display: flex; }
-.settings-modal { background: var(--card); border-radius: 24px; padding: 20px; width: 100%; max-width: 380px; border: 3px solid rgba(255,255,255,0.15); }
-.settings-title { font-size: 18px; font-weight: 800; text-align: center; margin-bottom: 14px; }
-.settings-label { font-size: 13px; font-weight: 700; color: rgba(255,255,255,0.55); margin-bottom: 6px; text-transform: uppercase; letter-spacing: 1px; }
-.settings-input { width: 100%; font-size: 14px; padding: 12px 14px; border-radius: 12px; border: 2px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.08); color: #fff; outline: none; font-family: monospace; margin-bottom: 12px; }
+.settings-modal { background: var(--card); border-radius: 24px; padding: 20px; width: 100%; max-width: 400px; border: 3px solid rgba(255,255,255,0.15); }
+.settings-title { font-size: 22px; font-weight: 800; margin-bottom: 16px; text-align: center; color: var(--gold); }
+.settings-label { font-size: 13px; font-weight: 700; color: rgba(255,255,255,0.5); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 6px; }
+.settings-input { width: 100%; font-size: 15px; padding: 12px 14px; border-radius: 12px; border: 2px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.08); color: #fff; outline: none; margin-bottom: 12px; font-family: monospace; }
 .settings-input:focus { border-color: var(--gold); }
-.settings-save { width: 100%; padding: 14px; font-size: 17px; font-weight: 800; border: none; border-radius: 12px; cursor: pointer; color: #1a1040; background: linear-gradient(90deg, var(--gold), #ffb53f); margin-bottom: 8px; }
-.settings-cancel { width: 100%; padding: 12px; font-size: 15px; font-weight: 700; border: none; border-radius: 12px; cursor: pointer; color: rgba(255,255,255,0.6); background: rgba(255,255,255,0.1); }
-.settings-hint { font-size: 12px; color: rgba(255,255,255,0.35); text-align: center; margin-bottom: 10px; line-height: 1.4; }
-#clearSaveBtn { background: rgba(255,255,255,0.09); color: rgba(255,255,255,0.4); font-size: 13px; padding: 10px 12px; }
+.settings-btns { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.settings-btn { font-size: 16px; font-weight: 800; padding: 13px; border: none; border-radius: 12px; cursor: pointer; }
+.settings-save { background: linear-gradient(90deg, var(--green), #1fa860); color: #0b3320; }
+.settings-cancel { background: rgba(255,255,255,0.12); color: #fff; }
+#clearSaveBtn{background:rgba(255,255,255,0.09);color:rgba(255,255,255,0.4);font-size:13px;padding:10px 12px;}
 </style>
 </head>
 <body>
@@ -183,544 +259,632 @@ html.barrel-roll { animation: barrelRoll 1.4s cubic-bezier(0.4, 0.0, 0.2, 1) for
 <div class="subtitle">SCOREKEEPER &middot; FIRST TO 200 WINS</div>
 
 <div id="setup">
-  <div id="nameRows"></div>
-  <button class="big-btn" onclick="startGame()">&#9654; START GAME</button>
+<div id="nameRows"></div>
+<button class="big-btn" onclick="startGame()">&#9654; START GAME</button>
 </div>
 
 <div id="game">
-  <div class="round-bar">
-    <div class="round-label">ROUND <span id="roundNum">1</span></div>
-    <div class="ctrl-btns">
-      <button class="ctrl-btn" id="undoBtn" onclick="undo()" disabled>&#8617; UNDO</button>
-      <button class="ctrl-btn" id="undoRoundBtn" onclick="confirmUndoRound()" disabled>&#8635; UNDO ROUND</button>
-      <button class="ctrl-btn" id="newGameBtn" onclick="confirmNewGame()">&#10022; NEW GAME</button>
-      <button class="ctrl-btn" id="clearSaveBtn" onclick="confirmClearSave()">&#128190; CLEAR SAVE</button>
-      <button class="ctrl-btn" id="settingsBtn" onclick="openSettings()" title="Gemini API Key">&#9881;&#65039;</button>
-    </div>
-  </div>
-  <div class="players" id="playerList"></div>
+<div class="round-bar">
+<div class="round-label">ROUND <span id="roundNum">1</span></div>
+<div class="ctrl-btns">
+<button class="ctrl-btn" id="undoBtn" onclick="undo()" disabled>&#8617; UNDO</button>
+<button class="ctrl-btn" id="undoRoundBtn" onclick="confirmUndoRound()" disabled>&#8635; UNDO RND</button>
+<button class="ctrl-btn" id="historyBtn" onclick="openHistory()">&#128220; HISTORY</button>
+<button class="ctrl-btn" id="newGameBtn" onclick="confirmNewGame()">&#10022; NEW</button>
+<button class="ctrl-btn" id="settingsBtn" onclick="openSettings()">&#9881;&#65039;</button>
+<button class="ctrl-btn" id="clearSaveBtn" onclick="confirmClearSave()">&#128190;</button>
+</div>
+</div>
+<div class="players" id="playerList"></div>
 </div>
 
-<div id="overlay" onclick="if(event.target===this)tryCloseModal()">
-  <div class="modal">
-    <div class="modal-avatar-wrap" id="modalAvatarWrap" style="display:none">
-      <img class="modal-avatar" id="modalAvatarImg" src="" alt="">
-    </div>
-    <div class="modal-title" id="modalName"></div>
-    <div class="modal-sub" id="modalSub"></div>
-    <div class="modal-toggle">
-      <button class="modal-toggle-btn mtb-active" id="mtbScore" onclick="switchModalView('score')">&#9998; Score</button>
-      <button class="modal-toggle-btn" id="mtbLb" onclick="switchModalView('lb')">&#128202; Leaderboard</button>
-    </div>
-    <div id="scorePanel">
-      <div id="stepChoice">
-        <div style="font-size:13px;font-weight:700;color:rgba(255,255,255,0.4);text-align:center;margin-bottom:10px;text-transform:uppercase;letter-spacing:1px;">What happened this round?</div>
-        <button class="choice-btn choice-bust" onclick="confirmBust()">&#128165; BUSTED &mdash; 0 pts</button>
-        <button class="choice-btn choice-scan" onclick="showCameraStep()">&#128247; Scan Cards</button>
-        <button class="choice-btn choice-cancel" onclick="closeModal()">Cancel</button>
-      </div>
-      <div id="stepCamera">
-        <input type="file" accept="image/*" capture="environment" id="cameraFileInput" onchange="handleCameraInput(this)">
-        <label for="cameraFileInput" class="camera-label" id="cameraLabel">
-          <span style="font-size:28px">&#128247;</span> Take Photo of Cards
-        </label>
-        <div id="photoThumb">
-          <img id="photoImg" src="" alt="Cards">
-          <button class="retake-btn" onclick="retakePhoto()">&#8635; Retake Photo</button>
-        </div>
-        <div id="geminiLoading">
-          <div class="spinner"></div>
-          Analyzing cards with AI&hellip;
-        </div>
-        <div id="cardResults">
-          <div class="score-result-box">
-            <div class="score-result-num" id="scoreResultNum">0</div>
-            <div class="score-result-label">Round Score</div>
-            <div id="flip7BonusLabel"></div>
-          </div>
-          <div>
-            <div class="add-card-label" style="margin-bottom:4px;">Detected cards &mdash; tap &#10005; to remove</div>
-            <div class="card-badges-wrap" id="cardBadgesWrap"></div>
-          </div>
-          <div class="add-card-section">
-            <div class="add-card-label">Add missing card</div>
-            <div class="add-card-grid" id="addCardGrid"></div>
-          </div>
-          <button class="confirm-score-btn" onclick="confirmCameraScore()">&#10003; Confirm Score</button>
-          <button class="back-btn" onclick="showChoiceStep()">&#8592; Back</button>
-        </div>
-      </div>
-      <div class="modal-scoreboard">
-        <div class="modal-scoreboard-label">SCORES</div>
-        <div id="modalScoreboard"></div>
-      </div>
-    </div>
-    <div id="lbPanel" style="display:none">
-      <div id="lbScoreboard"></div>
-    </div>
-  </div>
+<!-- SCORE MODAL -->
+<div id="overlay" onclick="if(event.target===this)closeModal()">
+<div class="modal">
+<div class="modal-avatar-wrap" id="modalAvatarWrap" style="display:none"><img class="modal-avatar" id="modalAvatarImg" src="" alt=""></div>
+<div class="modal-title" id="modalName"></div>
+<div class="modal-sub" id="modalSub"></div>
+<div class="modal-toggle">
+<button class="modal-toggle-btn mtb-active" id="mtbScore" onclick="switchModalView('score')">&#9998; Manual Entry</button>
+<button class="modal-toggle-btn" id="mtbScan" onclick="switchModalView('scan')">&#128247; Scan Cards</button>
+</div>
+<div class="board-link" id="mtbLb" onclick="switchModalView('lb')">&#128202; View Scoreboard</div>
+
+<!-- Score (manual entry) panel -->
+<div id="scorePanel">
+<div class="score-display" id="scoreDisplay">&nbsp;</div>
+<div class="pad">
+<button onclick="padDigit(1)">1</button><button onclick="padDigit(2)">2</button><button onclick="padDigit(3)">3</button>
+<button onclick="padDigit(4)">4</button><button onclick="padDigit(5)">5</button><button onclick="padDigit(6)">6</button>
+<button onclick="padDigit(7)">7</button><button onclick="padDigit(8)">8</button><button onclick="padDigit(9)">9</button>
+<button onclick="padClear()">C</button><button onclick="padDigit(0)">0</button><button onclick="padBack()">&#9003;</button>
+</div>
+<button class="bust-btn" style="margin-top:8px;width:100%" onclick="submitScore(0,[],'bust')">&#128165; BUSTED &mdash; 0 POINTS</button>
+<div class="modal-actions">
+<button class="cancel-btn" onclick="closeModal()">CANCEL</button>
+<button class="ok-btn" onclick="submitEntered()">&#10003; OK</button>
+</div>
+<div class="modal-scoreboard">
+<div class="modal-scoreboard-label">SCORES</div>
+<div id="modalScoreboard"></div>
+</div>
 </div>
 
+<!-- Camera / Scan panel -->
+<div id="scanPanel" style="display:none">
+<div class="cam-container" id="camContainer">
+<video id="camVideo" autoplay playsinline muted></video>
+<canvas id="camCanvas"></canvas>
+</div>
+<div id="scanStatus"></div>
+<div id="cardBadgesWrap" style="display:none">
+<div class="card-badges" id="cardBadges"></div>
+<div class="scan-result-score" id="scanResultScore"></div>
+<div class="scan-confirm-btns">
+<button class="scan-confirm-btn confirm" onclick="confirmScan()">&#10003; USE THIS</button>
+<button class="scan-confirm-btn retry" onclick="retryScan()">&#8635; RETRY</button>
+</div>
+</div>
+<div id="captureWrap">
+<button class="cam-btn" id="captureBtn" onclick="captureFrame()">&#128248; CAPTURE CARDS</button>
+<button class="cam-btn" id="skipScanBtn" onclick="switchModalView('score')">&#9999; Enter Manually</button>
+</div>
+<div id="manualFallback" style="display:none">
+<div class="mf-label">AI scan failed — enter score manually:</div>
+<div class="pad" style="margin-bottom:8px">
+<button onclick="padDigit(1)">1</button><button onclick="padDigit(2)">2</button><button onclick="padDigit(3)">3</button>
+<button onclick="padDigit(4)">4</button><button onclick="padDigit(5)">5</button><button onclick="padDigit(6)">6</button>
+<button onclick="padDigit(7)">7</button><button onclick="padDigit(8)">8</button><button onclick="padDigit(9)">9</button>
+<button onclick="padClear()">C</button><button onclick="padDigit(0)">0</button><button onclick="padBack()">&#9003;</button>
+</div>
+<div class="modal-actions">
+<button class="cancel-btn" onclick="closeModal()">CANCEL</button>
+<button class="ok-btn" onclick="submitEntered()">&#10003; OK</button>
+</div>
+</div>
+</div>
+
+<!-- Leaderboard panel -->
+<div id="lbPanel" style="display:none">
+<div id="lbScoreboard"></div>
+</div>
+</div>
+</div>
+
+<!-- WIN BANNER -->
 <div id="winBanner">
-  <div class="win-trophy">&#127942;</div>
-  <div class="win-name" id="winName"></div>
-  <div class="win-msg" id="winMsg"></div>
-  <div class="win-btns">
-    <button class="again" onclick="newGame()">&#127881; NEW GAME</button>
-    <button class="keep" onclick="hideWin()">KEEP SCORING</button>
-  </div>
+<div class="win-trophy">&#127942;</div>
+<div class="win-name" id="winName"></div>
+<div class="win-msg" id="winMsg"></div>
+<div class="win-final-lb">
+<div class="win-lb-title">FINAL STANDINGS</div>
+<div id="winLeaderboard"></div>
+</div>
+<div class="win-btns">
+<button class="again" onclick="newGame()">&#127881; NEW GAME</button>
+<button class="keep" onclick="hideWin()">KEEP SCORING</button>
+</div>
 </div>
 
-<div id="settingsOverlay" onclick="if(event.target===this)closeSettings()">
-  <div class="settings-modal">
-    <div class="settings-title">&#9881;&#65039; Gemini API Key</div>
-    <div class="settings-hint">Needed for AI card scanning. Get a free key at aistudio.google.com</div>
-    <div class="settings-label">API Key</div>
-    <input class="settings-input" id="geminiKeyInput" type="password" placeholder="Paste your Gemini API key" autocomplete="off">
-    <button class="settings-save" onclick="saveGeminiKeyFromInput()">&#10003; Save Key</button>
-    <button class="settings-cancel" onclick="closeSettings()">Cancel</button>
-  </div>
+<!-- HISTORY OVERLAY -->
+<div id="historyOverlay">
+<div class="history-modal">
+<div class="history-header">
+<div class="history-title">&#128220; Round History</div>
+<button class="history-close" onclick="closeHistory()">&#10005;</button>
+</div>
+<div id="historyContent"></div>
+</div>
+</div>
+
+<!-- PHOTO LIGHTBOX -->
+<div id="photoLightbox" onclick="this.classList.remove('show')">
+<img id="lightboxImg" src="" alt="">
+</div>
+
+<!-- SETTINGS OVERLAY -->
+<div id="settingsOverlay">
+<div class="settings-modal">
+<div class="settings-title">&#9881;&#65039; Settings</div>
+<div class="settings-label">Gemini API Key</div>
+<input class="settings-input" id="settingsKeyInput" type="text" placeholder="AIza... or AQ.Ab..." autocomplete="off">
+<div class="settings-btns">
+<button class="settings-btn settings-cancel" onclick="closeSettings()">CANCEL</button>
+<button class="settings-btn settings-save" onclick="saveSettings()">&#10003; SAVE</button>
+</div>
+</div>
 </div>
 
 <script>
 const COLORS=['#ffd23f','#ff5e7e','#4cc9f0','#3ddc84','#b388ff','#ff9a3f','#f72585','#80ffdb'];
 const TARGET=200;
-let players=[],history=[],currentPlayer=null,winShown=false,modalView='score';
+const NUM_CARDS=['0','1','2','3','4','5','6','7','8','9','10','11','12'];
+const GEMINI_MODEL='gemini-2.5-flash';
+
+let players=[],history=[],roundHistory=[],currentPlayer=null,entered='',winShown=false,modalView='score';
+let cameraStream=null,capturedImageBase64=null,scannedCards=null,scannedScore=null;
 const avatars=new Array(8).fill(null);
+let geminiApiKey=localStorage.getItem('geminiApiKey')||'';
 
-// Gemini key
-function getGeminiKey(){return localStorage.getItem('geminiApiKey')||'';}
-function saveGeminiKey(k){localStorage.setItem('geminiApiKey',k.trim());}
-function openSettings(){
-  document.getElementById('geminiKeyInput').value=getGeminiKey();
-  document.getElementById('settingsOverlay').classList.add('show');
-}
-function closeSettings(){document.getElementById('settingsOverlay').classList.remove('show');}
-function saveGeminiKeyFromInput(){
-  const k=document.getElementById('geminiKeyInput').value.trim();
-  if(!k){alert('Please enter a key.');return;}
-  saveGeminiKey(k);closeSettings();
-}
-
-// Player setup
-function setAvatar(i,input){
-  const file=input.files[0];if(!file)return;
-  const reader=new FileReader();
-  reader.onload=function(e){
-    avatars[i]=e.target.result;
-    const circle=document.getElementById('avatarCircle'+i);
-    circle.querySelector('img.avatar-img').src=avatars[i];
-    circle.classList.add('has-avatar');
-  };
-  reader.readAsDataURL(file);input.value='';
-}
+/* ─── SETUP ─── */
 const nameRows=document.getElementById('nameRows');
 for(let i=0;i<8;i++){
-  nameRows.insertAdjacentHTML('beforeend',
-    '<div class="name-row"><div class="name-num" style="background:'+COLORS[i]+'">'+(i+1)+'</div><label class="avatar-wrap" title="Add photo"><div class="avatar-circle" id="avatarCircle'+i+'"><span class="avatar-icon">&#128247;</span><img class="avatar-img" src="" alt=""></div><input type="file" accept="image/*" onchange="setAvatar('+i+',this)"></label><input type="text" maxlength="14" placeholder="Player '+(i+1)+(i<2?'':' (optional)')+'" id="name'+i+'" autocomplete="off"></div>');
+nameRows.insertAdjacentHTML('beforeend',
+`<div class="name-row"><div class="name-num" style="background:${COLORS[i]}">${i+1}</div><label class="avatar-wrap" title="Add photo"><div class="avatar-circle" id="avatarCircle${i}"><span class="avatar-icon">&#128247;</span><img class="avatar-img" src="" alt=""></div><input type="file" accept="image/*" onchange="setAvatar(${i},this)"></label><input type="text" maxlength="14" placeholder="Player ${i+1}${i<2?'':' (optional)'}" id="name${i}" autocomplete="off"></div>`);
+}
+
+function setAvatar(i,input){
+const file=input.files[0];if(!file)return;
+const reader=new FileReader();
+reader.onload=function(e){
+avatars[i]=e.target.result;
+const circle=document.getElementById('avatarCircle'+i);
+circle.querySelector('img.avatar-img').src=avatars[i];
+circle.classList.add('has-avatar');
+};
+reader.readAsDataURL(file);
+input.value='';
 }
 
 function startGame(){
-  players=[];
-  for(let i=0;i<8;i++){const v=document.getElementById('name'+i).value.trim();if(v)players.push({name:v,color:COLORS[i],scores:[],avatar:avatars[i]});}
-  if(players.length<1){alert('Enter at least one player name!');return;}
-  history=[];winShown=false;
-  document.getElementById('setup').style.display='none';
-  document.getElementById('game').style.display='block';
-  render();saveState();
-  if(!getGeminiKey()){
-    setTimeout(openSettings, 500);
-  }
+players=[];
+for(let i=0;i<8;i++){const v=document.getElementById('name'+i).value.trim();if(v)players.push({name:v,color:COLORS[i],scores:[],avatar:avatars[i]});}
+if(players.length<1){alert('Enter at least one player name!');return;}
+history=[];roundHistory=[];winShown=false;
+document.getElementById('setup').style.display='none';
+document.getElementById('game').style.display='block';
+if(!geminiApiKey){setTimeout(openSettings,400);}
+render();saveState();
 }
 
-const total=function(p){return p.scores.reduce(function(a,b){return a+b;},0);};
-const currentRound=function(){return Math.min.apply(null,players.map(function(p){return p.scores.length;}))+1;};
-const inCurrentRound=function(p){return p.scores.length>=currentRound();};
+/* ─── GAME LOGIC ─── */
+const total=p=>p.scores.reduce((a,b)=>a+b,0);
+const currentRound=()=>Math.min(...players.map(p=>p.scores.length))+1;
+const inCurrentRound=p=>p.scores.length>=currentRound();
 
 function render(){
-  document.getElementById('roundNum').textContent=currentRound();
-  document.getElementById('undoBtn').disabled=history.length===0;
-  document.getElementById('undoRoundBtn').disabled=Math.min.apply(null,players.map(function(p){return p.scores.length;}))=== 0;
-  var totals=players.map(total),max=Math.max.apply(null,totals);
-  var list=document.getElementById('playerList');list.innerHTML='';
-  var sorted=players.map(function(p,i){return{p:p,i:i};}).sort(function(a,b){return total(b.p)-total(a.p);});
-  sorted.forEach(function(obj){
-    var p=obj.p,i=obj.i;
-    var t=total(p),isLeader=t===max&&t>0,done=inCurrentRound(p);
-    var last=p.scores.length?(p.scores[p.scores.length-1]===0?'Last: BUST &#128165;':'Last: +'+p.scores[p.scores.length-1]):'Tap to score';
-    var dotContent=p.avatar?'<img src="'+p.avatar+'" alt="">':p.name[0].toUpperCase();
-    var dotBg=p.avatar?'transparent':p.color;
-    list.insertAdjacentHTML('beforeend',
-      '<div class="player-card'+(isLeader?' leader':'')+(done?' scored-this-round':'')+'" onclick="openModal('+i+')">'
-      +'<div class="pc-left"><div class="pc-dot" style="background:'+dotBg+'">'+dotContent+'</div>'
-      +'<div class="pc-info"><div class="pc-name">'+esc(p.name)+(isLeader?'<span class="crown">&#128081;</span>':'')+'</div>'
-      +'<div class="pc-last">'+last+'</div></div></div><div class="pc-total">'+t+'</div></div>');
-  });
+document.getElementById('roundNum').textContent=currentRound();
+document.getElementById('undoBtn').disabled=history.length===0;
+document.getElementById('undoRoundBtn').disabled=Math.min(...players.map(p=>p.scores.length))===0;
+const totals=players.map(total),max=Math.max(...totals);
+const list=document.getElementById('playerList');list.innerHTML='';
+const sorted=[...players].map((p,i)=>({p,i})).sort((a,b)=>total(b.p)-total(a.p));
+sorted.forEach(({p,i})=>{
+const t=total(p),isLeader=t===max&&t>0,done=inCurrentRound(p);
+const last=p.scores.length?(p.scores[p.scores.length-1]===0?'Last: BUST &#128165;':'Last: +'+p.scores[p.scores.length-1]):'Tap to score';
+const dotContent=p.avatar?`<img src="${p.avatar}" alt="">`:p.name[0].toUpperCase();
+const dotBg=p.avatar?'transparent':p.color;
+list.insertAdjacentHTML('beforeend',
+`<div class="player-card ${isLeader?'leader':''} ${done?'scored-this-round':''}" onclick="openModal(${i})">
+<div class="pc-left"><div class="pc-dot" style="background:${dotBg}">${dotContent}</div>
+<div class="pc-info"><div class="pc-name">${esc(p.name)}${isLeader?'<span class="crown">&#128081;</span>':''}</div>
+<div class="pc-last">${last}</div></div></div><div class="pc-total">${t}</div></div>`);
+});
 }
 
-function esc(s){var d=document.createElement('div');d.textContent=s;return d.innerHTML;}
+function esc(s){const d=document.createElement('div');d.textContent=s;return d.innerHTML;}
 
-// Audio
-var _ac=null;
+/* ─── AUDIO ─── */
+let _ac=null;
 function getAC(){if(!_ac)_ac=new(window.AudioContext||window.webkitAudioContext)();if(_ac.state==='suspended')_ac.resume();return _ac;}
-function playTap(){try{var ctx=getAC(),t=ctx.currentTime,o=ctx.createOscillator(),g=ctx.createGain();o.connect(g);g.connect(ctx.destination);o.type='sine';o.frequency.setValueAtTime(880,t);o.frequency.exponentialRampToValueAtTime(660,t+0.06);g.gain.setValueAtTime(0.18,t);g.gain.exponentialRampToValueAtTime(0.001,t+0.07);o.start(t);o.stop(t+0.08);}catch(e){}}
-function playScore(){try{var ctx=getAC(),t=ctx.currentTime;[[523,0,0.35],[784,0.11,0.35],[1047,0.2,0.45]].forEach(function(arr){var o=ctx.createOscillator(),g=ctx.createGain();o.connect(g);g.connect(ctx.destination);o.type='sine';o.frequency.value=arr[0];g.gain.setValueAtTime(0,t+arr[1]);g.gain.linearRampToValueAtTime(0.28,t+arr[1]+0.02);g.gain.exponentialRampToValueAtTime(0.001,t+arr[1]+arr[2]);o.start(t+arr[1]);o.stop(t+arr[1]+arr[2]+0.05);});}catch(e){}}
-function playBust(){try{var ctx=getAC(),t=ctx.currentTime;var o=ctx.createOscillator(),g=ctx.createGain();o.connect(g);g.connect(ctx.destination);o.type='sawtooth';o.frequency.setValueAtTime(320,t);o.frequency.exponentialRampToValueAtTime(90,t+0.55);g.gain.setValueAtTime(0.28,t);g.gain.setValueAtTime(0.28,t+0.1);g.gain.exponentialRampToValueAtTime(0.001,t+0.6);o.start(t);o.stop(t+0.65);var o2=ctx.createOscillator(),g2=ctx.createGain();o2.connect(g2);g2.connect(ctx.destination);o2.type='sine';o2.frequency.setValueAtTime(100,t+0.45);o2.frequency.exponentialRampToValueAtTime(50,t+0.65);g2.gain.setValueAtTime(0.35,t+0.45);g2.gain.exponentialRampToValueAtTime(0.001,t+0.7);o2.start(t+0.45);o2.stop(t+0.75);}catch(e){}}
-function playWin(){try{var ctx=getAC(),t=ctx.currentTime;[[523,0],[659,0.13],[784,0.26],[1047,0.39]].forEach(function(arr){var o=ctx.createOscillator(),g=ctx.createGain();o.connect(g);g.connect(ctx.destination);o.type='sine';o.frequency.value=arr[0];g.gain.setValueAtTime(0,t+arr[1]);g.gain.linearRampToValueAtTime(0.3,t+arr[1]+0.03);g.gain.exponentialRampToValueAtTime(0.001,t+arr[1]+0.55);o.start(t+arr[1]);o.stop(t+arr[1]+0.6);});[[2093,0.55],[2637,0.68],[2093,0.78]].forEach(function(arr){var o=ctx.createOscillator(),g=ctx.createGain();o.connect(g);g.connect(ctx.destination);o.type='sine';o.frequency.value=arr[0];g.gain.setValueAtTime(0.12,t+arr[1]);g.gain.exponentialRampToValueAtTime(0.001,t+arr[1]+0.2);o.start(t+arr[1]);o.stop(t+arr[1]+0.25);});}catch(e){}}
+function playTap(){try{const ctx=getAC(),t=ctx.currentTime,o=ctx.createOscillator(),g=ctx.createGain();o.connect(g);g.connect(ctx.destination);o.type='sine';o.frequency.setValueAtTime(880,t);o.frequency.exponentialRampToValueAtTime(660,t+0.06);g.gain.setValueAtTime(0.18,t);g.gain.exponentialRampToValueAtTime(0.001,t+0.07);o.start(t);o.stop(t+0.08);}catch(e){}}
+function playScore(){try{const ctx=getAC(),t=ctx.currentTime;[[523,0,0.35],[784,0.11,0.35],[1047,0.2,0.45]].forEach(([freq,delay,dur])=>{const o=ctx.createOscillator(),g=ctx.createGain();o.connect(g);g.connect(ctx.destination);o.type='sine';o.frequency.value=freq;g.gain.setValueAtTime(0,t+delay);g.gain.linearRampToValueAtTime(0.28,t+delay+0.02);g.gain.exponentialRampToValueAtTime(0.001,t+delay+dur);o.start(t+delay);o.stop(t+delay+dur+0.05);});}catch(e){}}
+function playBust(){try{const ctx=getAC(),t=ctx.currentTime;const o=ctx.createOscillator(),g=ctx.createGain();o.connect(g);g.connect(ctx.destination);o.type='sawtooth';o.frequency.setValueAtTime(320,t);o.frequency.exponentialRampToValueAtTime(90,t+0.55);g.gain.setValueAtTime(0.28,t);g.gain.setValueAtTime(0.28,t+0.1);g.gain.exponentialRampToValueAtTime(0.001,t+0.6);o.start(t);o.stop(t+0.65);const o2=ctx.createOscillator(),g2=ctx.createGain();o2.connect(g2);g2.connect(ctx.destination);o2.type='sine';o2.frequency.setValueAtTime(100,t+0.45);o2.frequency.exponentialRampToValueAtTime(50,t+0.65);g2.gain.setValueAtTime(0.35,t+0.45);g2.gain.exponentialRampToValueAtTime(0.001,t+0.7);o2.start(t+0.45);o2.stop(t+0.75);}catch(e){}}
+function playWin(){try{const ctx=getAC(),t=ctx.currentTime;[[523,0],[659,0.13],[784,0.26],[1047,0.39]].forEach(([freq,delay])=>{const o=ctx.createOscillator(),g=ctx.createGain();o.connect(g);g.connect(ctx.destination);o.type='sine';o.frequency.value=freq;g.gain.setValueAtTime(0,t+delay);g.gain.linearRampToValueAtTime(0.3,t+delay+0.03);g.gain.exponentialRampToValueAtTime(0.001,t+delay+0.55);o.start(t+delay);o.stop(t+delay+0.6);});[[2093,0.55],[2637,0.68],[2093,0.78]].forEach(([freq,delay])=>{const o=ctx.createOscillator(),g=ctx.createGain();o.connect(g);g.connect(ctx.destination);o.type='sine';o.frequency.value=freq;g.gain.setValueAtTime(0.12,t+delay);g.gain.exponentialRampToValueAtTime(0.001,t+delay+0.2);o.start(t+delay);o.stop(t+delay+0.25);});}catch(e){}}
 
-// Modal header
+/* ─── MODAL ─── */
 function updateModalHeader(i){
-  var p=players[i];
-  var wrap=document.getElementById('modalAvatarWrap'),img=document.getElementById('modalAvatarImg');
-  if(p.avatar){img.src=p.avatar;wrap.style.display='block';}else{wrap.style.display='none';}
-  document.getElementById('modalName').textContent=p.name;
-  document.getElementById('modalSub').textContent='Round '+(p.scores.length+1)+' ÃÂÃÂÃÂÃÂ· Total: '+total(p);
+const p=players[i];
+const wrap=document.getElementById('modalAvatarWrap'),img=document.getElementById('modalAvatarImg');
+if(p.avatar){img.src=p.avatar;wrap.style.display='block';}else{wrap.style.display='none';}
+document.getElementById('modalName').textContent=p.name;
+document.getElementById('modalSub').textContent=`Round ${p.scores.length+1} · Total: ${total(p)}`;
 }
-
 function openModal(i){
-  currentPlayer=i;
-  updateModalHeader(i);
-  updateModalScoreboard();
-  switchModalView('score');
-  showChoiceStep();
-  document.getElementById('overlay').classList.add('show');
-}
-function tryCloseModal(){
-  if(document.getElementById('stepCamera').style.display==='none'||
-     document.getElementById('stepCamera').style.display===''){
-    closeModal();
-  }
-}
-function closeModal(){
-  document.getElementById('overlay').classList.remove('show');
-  currentPlayer=null;
-  resetCameraStep();
+if(winShown)return;
+currentPlayer=i;entered='';scannedCards=null;scannedScore=null;capturedImageBase64=null;
+updateModalHeader(i);
+updateDisplay();updateModalScoreboard();
+switchModalView('score');
+document.getElementById('overlay').classList.add('show');
 }
 function switchModalView(view){
-  modalView=view;
-  document.getElementById('scorePanel').style.display=view==='score'?'':'none';
-  document.getElementById('lbPanel').style.display=view==='lb'?'':'none';
-  document.getElementById('mtbScore').classList.toggle('mtb-active',view==='score');
-  document.getElementById('mtbLb').classList.toggle('mtb-active',view==='lb');
-  if(view==='lb')updateLbPanel();
-}
-
-// Choice step
-function showChoiceStep(){
-  document.getElementById('stepChoice').style.display='flex';
-  document.getElementById('stepChoice').style.flexDirection='column';
-  document.getElementById('stepChoice').style.gap='10px';
-  document.getElementById('stepCamera').style.display='none';
-  resetCameraStep();
-}
-function confirmBust(){submitScore(0);}
-
-// Camera step
-var detectedCards=[];
-var currentPhotoBase64=null;
-var currentPhotoMime='image/jpeg';
-
-function showCameraStep(){
-  document.getElementById('stepChoice').style.display='none';
-  document.getElementById('stepCamera').style.display='flex';
-  document.getElementById('stepCamera').style.flexDirection='column';
-  document.getElementById('stepCamera').style.gap='10px';
-}
-function resetCameraStep(){
-  detectedCards=[];
-  currentPhotoBase64=null;
-  document.getElementById('photoThumb').style.display='none';
-  document.getElementById('photoImg').src='';
-  document.getElementById('geminiLoading').style.display='none';
-  document.getElementById('cardResults').style.display='none';
-  document.getElementById('cameraLabel').style.display='';
-  try{document.getElementById('cameraFileInput').value='';}catch(e){}
-}
-function retakePhoto(){
-  document.getElementById('photoThumb').style.display='none';
-  document.getElementById('geminiLoading').style.display='none';
-  document.getElementById('cardResults').style.display='none';
-  document.getElementById('cameraLabel').style.display='';
-  try{document.getElementById('cameraFileInput').value='';}catch(e){}
-  document.getElementById('cameraFileInput').click();
-}
-function handleCameraInput(input){
-  var file=input.files[0];if(!file)return;
-  currentPhotoMime=file.type||'image/jpeg';
-  var reader=new FileReader();
-  reader.onload=function(e){
-    var dataUrl=e.target.result;
-    currentPhotoBase64=dataUrl.split(',')[1];
-    document.getElementById('photoImg').src=dataUrl;
-    document.getElementById('photoThumb').style.display='block';
-    document.getElementById('cameraLabel').style.display='none';
-    analyzeWithGemini();
-  };
-  reader.readAsDataURL(file);
-}
-
-function analyzeWithGemini(){
-  var key=getGeminiKey();
-  if(!key){
-    openSettings();
-    return;
-  }
-  document.getElementById('geminiLoading').style.display='flex';
-  document.getElementById('cardResults').style.display='none';
-  var prompt='You are analyzing a photo of Flip 7 playing cards laid out left to right in the order they were dealt to the player.\n\nIdentify each card in sequence from left to right. Cards can be:\n- Number cards: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12\n- Modifier cards: +2, +4, +6, +8, +10, x2\n- Action cards with no point value: Freeze, Flip Three, Second Chance\n\nReturn ONLY a valid JSON object in this exact format, no other text:\n{"cards": ["3", "+4", "x2", "5"], "notes": ""}\n\nList only the cards you can clearly identify. Use the string values exactly as shown above.\n\nIMPORTANT: Only number cards (0-12) count toward the Flip 7 bonus (7 unique number cards = +15 pts). Modifier cards (+2, +4, +6, +8, +10, x2) and action cards do NOT count toward the 7-card total.';
-  var body=JSON.stringify({contents:[{parts:[{text:prompt},{inline_data:{mime_type:currentPhotoMime,data:currentPhotoBase64}}]}]});
-  fetch('https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key='+key,{method:'POST',headers:{'Content-Type':'application/json'},body:body})
-  .then(function(r){return r.json();})
-  .then(function(data){
-    if(data.error){
-      alert('Gemini error: '+data.error.message);
-      detectedCards=[];
-    }else{
-      var text=(data.candidates&&data.candidates[0]&&data.candidates[0].content&&data.candidates[0].content.parts&&data.candidates[0].content.parts[0]&&data.candidates[0].content.parts[0].text)||'{"cards":[]}';
-      var m=text.match(/\{[\s\S]*\}/);
-      if(m){try{detectedCards=JSON.parse(m[0]).cards||[];}catch(e){detectedCards=[];}}
-      else{detectedCards=[];}
-    }
-    showCardResults();
-  })
-  .catch(function(e){
-    console.error(e);
-    alert('Network error. Check connection and try again.');
-    detectedCards=[];
-    showCardResults();
-  });
-}
-function showCardResults(){
-  document.getElementById('geminiLoading').style.display='none';
-  document.getElementById('cardResults').style.display='flex';
-  document.getElementById('cardResults').style.flexDirection='column';
-  document.getElementById('cardResults').style.gap='10px';
-  renderCardBadges();
-  buildAddCardGrid();
-}
-
-// Score calculation
-var NUM_CARDS=['0','1','2','3','4','5','6','7','8','9','10','11','12'];
-var ACTION_CARDS=['Freeze','Flip Three','Second Chance'];
-function calculateFlip7Score(cards){
-  var score=0,numCount=0;
-  for(var ci=0;ci<cards.length;ci++){
-    var c=cards[ci];
-    if(NUM_CARDS.indexOf(c)>=0){numCount++;score+=c==='0'?1:parseInt(c,10);}
-    else if(c==='+2'){score+=2;}
-    else if(c==='+4'){score+=4;}
-    else if(c==='+6'){score+=6;}
-    else if(c==='+8'){score+=8;}
-    else if(c==='+10'){score+=10;}
-    else if(c==='x2'){score*=2;}
-  }
-  var numberOnlyCount=cards.filter(function(c){return NUM_CARDS.indexOf(c)>=0;}).length;
-  var flip7=numberOnlyCount===7;
-  if(flip7)score+=15;
-  return{score:score,numCount:numCount,flip7:flip7};
-}
-function cardColor(card){
-  if(card==='+2'||card==='+4')return'#4cc9f0';
-  if(card==='x2')return'#ff5e7e';
-  if(ACTION_CARDS.indexOf(card)>=0)return'#b388ff';
-  return'#ffd23f';
-}
-function cardTextColor(card){
-  if(card==='x2'||ACTION_CARDS.indexOf(card)>=0)return'#fff';
-  return'#1a1040';
-}
-
-function renderCardBadges(){
-  var wrap=document.getElementById('cardBadgesWrap');
-  wrap.innerHTML='';
-  if(detectedCards.length===0){
-    wrap.innerHTML='<span class="no-cards-msg">No cards detected &mdash; add manually below</span>';
-  }else{
-    detectedCards.forEach(function(card,idx){
-      var badge=document.createElement('div');
-      badge.className='card-badge';
-      badge.style.background=cardColor(card);
-      badge.style.color=cardTextColor(card);
-      var btn=document.createElement('button');
-      btn.className='badge-remove';
-      btn.innerHTML='&#10005;';
-      btn.style.color=cardTextColor(card);
-      (function(index){btn.onclick=function(){removeCard(index);};})(idx);
-      var span=document.createElement('span');
-      span.textContent=card;
-      badge.appendChild(span);
-      badge.appendChild(btn);
-      wrap.appendChild(badge);
-    });
-  }
-  updateScoreTotals();
-}
-function removeCard(idx){
-  detectedCards.splice(idx,1);
-  renderCardBadges();
-  playTap();
-}
-function addCard(card){
-  detectedCards.push(card);
-  renderCardBadges();
-  playTap();
-}
-function updateScoreTotals(){
-  var result=calculateFlip7Score(detectedCards);
-  document.getElementById('scoreResultNum').textContent=result.score;
-  document.getElementById('flip7BonusLabel').innerHTML=result.flip7?'<div class="flip7-badge">&#11088; FLIP 7! +15 bonus</div>':'';
-}
-function buildAddCardGrid(){
-  var grid=document.getElementById('addCardGrid');
-  grid.innerHTML='';
-  var allCards=[
-    {l:'0',c:'add-num'},{l:'1',c:'add-num'},{l:'2',c:'add-num'},{l:'3',c:'add-num'},
-    {l:'4',c:'add-num'},{l:'5',c:'add-num'},{l:'6',c:'add-num'},{l:'7',c:'add-num'},
-    {l:'8',c:'add-num'},{l:'9',c:'add-num'},{l:'10',c:'add-num'},{l:'11',c:'add-num'},
-    {l:'12',c:'add-num'},{l:'+2',c:'add-mod-plus'},{l:'+4',c:'add-mod-plus'},
-    {l:'x2',c:'add-mod-x'},{l:'Freeze',c:'add-action'},{l:'Flip Three',c:'add-action'},{l:'Second Chance',c:'add-action'}
-  ];
-  allCards.forEach(function(obj){
-    var btn=document.createElement('button');
-    btn.className='add-card-btn '+obj.c;
-    btn.textContent=obj.l;
-    (function(label){btn.onclick=function(){addCard(label);};})(obj.l);
-    grid.appendChild(btn);
-  });
-}
-function confirmCameraScore(){
-  var result=calculateFlip7Score(detectedCards);
-  submitScore(result.score);
-}
-
-// Score submission
-function submitScore(val){
-  if(currentPlayer===null)return;
-  if(val===0)playBust();else playScore();
-  var scoredIdx=currentPlayer;
-  players[scoredIdx].scores.push(val);
-  history.push(scoredIdx);
-  render();checkWin();saveState();
-  if(winShown){closeModal();return;}
-  var nextIdx=findNextPlayer(scoredIdx);
-  if(nextIdx!==null){
-    currentPlayer=nextIdx;
-    updateModalHeader(nextIdx);
-    updateModalScoreboard();
-    showChoiceStep();
-  }else{
-    closeModal();
-  }
-}
-function findNextPlayer(fromIdx){
-  var n=players.length;
-  for(var offset=1;offset<n;offset++){
-    var idx=(fromIdx+offset)%n;
-    if(!inCurrentRound(players[idx]))return idx;
-  }
-  return null;
-}
-
-// Scoreboard
-function updateModalScoreboard(){
-  var sb=document.getElementById('modalScoreboard');if(!sb)return;sb.innerHTML='';
-  var sorted=players.map(function(p,i){return{p:p,i:i};}).sort(function(a,b){return total(b.p)-total(a.p);});
-  sorted.forEach(function(obj){
-    var p=obj.p,i=obj.i;
-    var isActive=i===currentPlayer,row=document.createElement('div');
-    row.className='sb-row'+(isActive?' sb-active':'');
-    if(isActive)row.style.borderColor=p.color;
-    var dotContent=p.avatar?'<img src="'+p.avatar+'" alt="">':'';
-    var dotBg=p.avatar?'transparent':p.color;
-    row.innerHTML='<div class="sb-dot" style="background:'+dotBg+'">'+dotContent+'</div><div class="sb-name">'+esc(p.name)+'</div><div class="sb-score">'+total(p)+'</div>';
-    sb.appendChild(row);
-  });
+stopCamera();
+modalView=view;
+document.getElementById('scorePanel').style.display=view==='score'?'':'none';
+document.getElementById('scanPanel').style.display=view==='scan'?'':'none';
+document.getElementById('lbPanel').style.display=view==='lb'?'':'none';
+document.getElementById('mtbScore').classList.toggle('mtb-active',view==='score');
+document.getElementById('mtbScan').classList.toggle('mtb-active',view==='scan');
+document.getElementById('mtbLb').classList.toggle('active',view==='lb');
+if(view==='lb')updateLbPanel();
+if(view==='scan')initCamera();
 }
 function updateLbPanel(){
-  var lb=document.getElementById('lbScoreboard');if(!lb)return;lb.innerHTML='';
-  var sorted=players.map(function(p,i){return{p:p,i:i};}).sort(function(a,b){return total(b.p)-total(a.p);});
-  var max=Math.max.apply(null,players.map(total));
-  sorted.forEach(function(obj,rank){
-    var p=obj.p,i=obj.i;
-    var t=total(p),isLeader=t===max&&t>0,isActive=i===currentPlayer;
-    var row=document.createElement('div');
-    row.className='lb-row'+(isActive?' lb-active':'')+(isLeader?' lb-leader':'');
-    if(isActive)row.style.borderColor=p.color;
-    var dotContent=p.avatar?'<img src="'+p.avatar+'" alt="">':p.name[0].toUpperCase();
-    var dotBg=p.avatar?'transparent':p.color;
-    row.innerHTML='<div class="lb-rank">'+(rank+1)+'</div><div class="lb-dot" style="background:'+dotBg+'">'+dotContent+'</div><div class="lb-name">'+esc(p.name)+'</div><div class="lb-score">'+t+'</div>';
-    lb.appendChild(row);
-  });
+const lb=document.getElementById('lbScoreboard');if(!lb)return;lb.innerHTML='';
+const sorted=[...players].map((p,i)=>({p,i})).sort((a,b)=>total(b.p)-total(a.p));
+const max=Math.max(...players.map(total));
+sorted.forEach(({p,i},rank)=>{
+const t=total(p),isLeader=t===max&&t>0,isActive=i===currentPlayer;
+const row=document.createElement('div');
+row.className='lb-row'+(isActive?' lb-active':'')+(isLeader?' lb-leader':'');
+if(isActive)row.style.borderColor=p.color;
+const dotContent=p.avatar?`<img src="${p.avatar}" alt="">`:p.name[0].toUpperCase();
+const dotBg=p.avatar?'transparent':p.color;
+row.innerHTML=`<div class="lb-rank">${rank+1}</div><div class="lb-dot" style="background:${dotBg}">${dotContent}</div><div class="lb-name">${esc(p.name)}</div><div class="lb-score">${t}</div>`;
+lb.appendChild(row);
+});
+}
+function updateModalScoreboard(){
+const sb=document.getElementById('modalScoreboard');if(!sb)return;sb.innerHTML='';
+const sorted=[...players].map((p,i)=>({p,i})).sort((a,b)=>total(b.p)-total(a.p));
+sorted.forEach(({p,i})=>{
+const isActive=i===currentPlayer,row=document.createElement('div');
+row.className='sb-row'+(isActive?' sb-active':'');
+if(isActive)row.style.borderColor=p.color;
+const sbDotContent=p.avatar?`<img src="${p.avatar}" alt="">`:'';
+const sbDotBg=p.avatar?'transparent':p.color;
+row.innerHTML=`<div class="sb-dot" style="background:${sbDotBg}">${sbDotContent}</div><div class="sb-name">${esc(p.name)}</div><div class="sb-score">${total(p)}</div>`;
+sb.appendChild(row);
+});
+}
+function closeModal(){
+stopCamera();
+document.getElementById('overlay').classList.remove('show');
+currentPlayer=null;
+}
+function padDigit(d){if(entered.length<3){entered+=d;updateDisplay();playTap();}}
+function padBack(){entered=entered.slice(0,-1);updateDisplay();playTap();}
+function padClear(){entered='';updateDisplay();playTap();}
+function updateDisplay(){document.getElementById('scoreDisplay').innerHTML=entered===''?'&nbsp;':entered;}
+function submitEntered(){if(entered===''){closeModal();return;}submitScore(parseInt(entered,10),[],null);}
+
+function submitScore(val,cards,imageData){
+if(currentPlayer===null)return;
+const bust=(val===0&&(cards.length===0||imageData==='bust'));
+if(val===0)playBust();else playScore();
+const scoredIdx=currentPlayer;
+const roundNum=players[scoredIdx].scores.length+1;
+players[scoredIdx].scores.push(val);
+history.push(scoredIdx);
+// Save to round history
+addRoundHistoryEntry(scoredIdx,roundNum,val,cards,imageData==='bust'?null:imageData,imageData==='bust');
+render();checkWin();saveState();
+if(winShown){closeModal();return;}
+const nextIdx=findNextPlayer(scoredIdx);if(nextIdx!==null){
+currentPlayer=nextIdx;entered='';scannedCards=null;scannedScore=null;capturedImageBase64=null;
+updateModalHeader(nextIdx);
+updateDisplay();updateModalScoreboard();
+if(modalView==='scan')retryScan();
+}else{closeModal();}
+}
+function findNextPlayer(fromIdx){
+const n=players.length;
+for(let offset=1;offset<n;offset++){const idx=(fromIdx+offset)%n;if(!inCurrentRound(players[idx]))return idx;}
+return null;
 }
 
-// Undo
-function undo(){
-  if(!history.length)return;
-  var i=history.pop();players[i].scores.pop();winShown=false;hideWin();render();saveState();
+/* ─── ROUND HISTORY ─── */
+function addRoundHistoryEntry(playerIdx,roundNum,score,cards,imageThumb,bust){
+// Find or create the round record
+let roundRecord=roundHistory.find(r=>r.round===roundNum);
+if(!roundRecord){roundRecord={round:roundNum,entries:[]};roundHistory.push(roundRecord);}
+// Resize image if present
+let thumb=null;
+if(imageThumb){
+try{
+const canvas=document.createElement('canvas');
+const img2=new Image();img2.src=imageThumb;
+canvas.width=200;canvas.height=Math.round(200*(img2.naturalHeight||150)/(img2.naturalWidth||200));
+const ctx2=canvas.getContext('2d');ctx2.drawImage(img2,0,0,canvas.width,canvas.height);
+thumb=canvas.toDataURL('image/jpeg',0.6);
+}catch(e){thumb=imageThumb;}
 }
-function confirmUndoRound(){
-  var r=Math.min.apply(null,players.map(function(p){return p.scores.length;}));
-  if(r===0)return;
-  if(confirm('Undo Round '+r+'? This removes everyone\'s scores for that round.'))undoLastRound();
-}
-function undoLastRound(){
-  var r=Math.min.apply(null,players.map(function(p){return p.scores.length;}));
-  if(r===0)return;
-  players.forEach(function(p){p.scores=p.scores.slice(0,r-1);});
-  history=[];winShown=false;hideWin();render();saveState();
+roundRecord.entries.push({playerIdx,score,cards:cards||[],thumb,bust:!!bust});
 }
 
-// Win
+function openHistory(){
+renderHistory();
+document.getElementById('historyOverlay').classList.add('show');
+}
+function closeHistory(){document.getElementById('historyOverlay').classList.remove('show');}
+function renderHistory(){
+const container=document.getElementById('historyContent');
+container.innerHTML='';
+if(!roundHistory.length){container.innerHTML='<div class="no-history">&#128220; No rounds played yet</div>';return;}
+// Sort newest-first
+const sorted=[...roundHistory].sort((a,b)=>b.round-a.round);
+sorted.forEach(rr=>{
+const div=document.createElement('div');div.className='history-round';
+div.innerHTML=`<div class="history-round-header" onclick="toggleHistRound(this)">
+<div class="history-round-label">Round ${rr.round}</div>
+<div class="history-round-toggle">&#9660;</div>
+</div>
+<div class="history-round-body open" id="histRound${rr.round}">
+${rr.entries.map(e=>histEntryHTML(e)).join('')}
+</div>`;
+container.appendChild(div);
+});
+}
+function toggleHistRound(header){
+const body=header.nextElementSibling;
+const open=body.classList.toggle('open');
+header.querySelector('.history-round-toggle').innerHTML=open?'&#9660;':'&#9650;';
+}
+function histEntryHTML(e){
+const p=players[e.playerIdx];if(!p)return'';
+const color=p.color;
+const dotContent=p.avatar?`<img src="${p.avatar}" alt="">`:p.name[0].toUpperCase();
+const dotBg=p.avatar?'transparent':color;
+const badgesHTML=e.bust?'<span class="card-badge badge-action">BUST</span>'
+:(e.cards.length?e.cards.map(c=>cardBadgeHTML(c)).join(''):'');
+const photoHTML=e.thumb?`<img class="hist-photo" src="${e.thumb}" alt="" onclick="openLightbox('${e.thumb}')">`:
+(e.bust?'<span style="font-size:28px">&#128165;</span>':'');
+return`<div class="history-player-row">
+<div class="hist-dot" style="background:${dotBg}">${dotContent}</div>
+<div class="hist-info">
+<div class="hist-name">${esc(p.name)}</div>
+<div class="hist-cards">${badgesHTML}</div>
+<div class="hist-score">${e.bust?'<span class="hist-bust">BUSTED — 0</span>':`<span class="hist-score-val">+${e.score} pts</span>`}</div>
+</div>
+${photoHTML}
+</div>`;
+}
+function openLightbox(src){
+document.getElementById('lightboxImg').src=src;
+document.getElementById('photoLightbox').classList.add('show');
+}
+
+/* ─── CARD BADGES ─── */
+function cardBadgeHTML(card){
+let cls='badge-num',label=card;
+if(card.startsWith('+'))cls='badge-plus';
+else if(card==='x2')cls='badge-x2';
+else if(!NUM_CARDS.includes(card))cls='badge-action';
+return`<span class="card-badge ${cls}">${esc(label)}</span>`;
+}
+
+/* ─── CAMERA / GEMINI ─── */
+async function initCamera(){
+const status=document.getElementById('scanStatus');
+const captureWrap=document.getElementById('captureWrap');
+const cardBadgesWrap=document.getElementById('cardBadgesWrap');
+const manualFallback=document.getElementById('manualFallback');
+captureWrap.style.display='block';cardBadgesWrap.style.display='none';manualFallback.style.display='none';
+status.textContent='Starting camera...';
+try{
+cameraStream=await navigator.mediaDevices.getUserMedia({video:{facingMode:'environment'},audio:false});
+const video=document.getElementById('camVideo');
+video.srcObject=cameraStream;
+await video.play();
+status.textContent='Point at the cards and tap Capture';
+}catch(err){
+status.textContent='Camera unavailable — enter score manually below';
+document.getElementById('captureBtn').style.display='none';
+document.getElementById('skipScanBtn').style.display='none';
+manualFallback.style.display='block';
+}
+}
+
+function stopCamera(){
+if(cameraStream){cameraStream.getTracks().forEach(t=>t.stop());cameraStream=null;}
+const video=document.getElementById('camVideo');
+if(video){video.srcObject=null;}
+}
+
+function captureFrame(){
+const video=document.getElementById('camVideo');
+const canvas=document.getElementById('camCanvas');
+canvas.width=video.videoWidth||640;canvas.height=video.videoHeight||480;
+const ctx=canvas.getContext('2d');
+ctx.drawImage(video,0,0,canvas.width,canvas.height);
+capturedImageBase64=canvas.toDataURL('image/jpeg',0.85).split(',')[1];
+stopCamera();
+document.getElementById('captureWrap').style.display='none';
+document.getElementById('scanStatus').textContent='&#129302; Analyzing with AI...';
+if(!geminiApiKey){
+document.getElementById('scanStatus').textContent='No API key set — entering manually';
+showManualFallback();return;
+}
+callGemini(capturedImageBase64);
+}
+
+async function callGemini(imageBase64){
+const status=document.getElementById('scanStatus');
+const prompt=`You are analyzing cards from the Flip 7 card game. Look carefully at ALL the cards visible.
+
+Possible cards:
+- Number cards: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12
+- Modifier cards: +2, +4, +6, +8, +10, x2
+- Action cards: FLIP, FREEZE, SECOND CHANCE, DEAL THREE, or any other non-number non-modifier card
+
+Return ONLY a valid JSON array of card names in the order they were laid down (left to right), like:
+["7", "3", "+2", "x2", "11"]
+
+Use exact strings: number cards as their number, modifier cards with their exact symbol (+2, +4, etc.), action cards as "action". Nothing else in your response.`;
+
+try{
+const resp=await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent?key=${geminiApiKey}`,{
+method:'POST',
+headers:{'Content-Type':'application/json'},
+body:JSON.stringify({
+contents:[{parts:[
+{text:prompt},
+{inlineData:{mimeType:'image/jpeg',data:imageBase64}}
+]}],
+generationConfig:{temperature:0,maxOutputTokens:256}
+})
+});
+if(!resp.ok){throw new Error(`Gemini error: ${resp.status}`);}
+const data=await resp.json();
+const text=data.candidates?.[0]?.content?.parts?.[0]?.text||'';
+const match=text.match(/\[[\s\S]*\]/);
+if(!match)throw new Error('No card array in response');
+const cards=JSON.parse(match[0]);
+showScanResult(cards);
+}catch(err){
+console.error('Gemini error:',err);
+status.textContent='AI scan failed — enter score below';
+showManualFallback();
+}
+}
+
+function calculateCardScore(cards){
+let running=0;
+for(const card of cards){
+const n=parseInt(card);
+if(!isNaN(n)&&NUM_CARDS.includes(card)){
+running+=(n===0?1:n);
+}else if(card==='+2')running+=2;
+else if(card==='+4')running+=4;
+else if(card==='+6')running+=6;
+else if(card==='+8')running+=8;
+else if(card==='+10')running+=10;
+else if(card==='x2')running*=2;
+// action cards = 0, skip
+}
+// Flip 7 bonus: exactly 7 number cards
+const numCount=cards.filter(c=>NUM_CARDS.includes(c)).length;
+if(numCount===7)running+=15;
+return running;
+}
+
+function showScanResult(cards){
+scannedCards=cards;
+scannedScore=calculateCardScore(cards);
+const status=document.getElementById('scanStatus');
+const cardBadgesWrap=document.getElementById('cardBadgesWrap');
+const cardBadges=document.getElementById('cardBadges');
+const scoreEl=document.getElementById('scanResultScore');
+status.textContent='';
+cardBadges.innerHTML=cards.map(c=>cardBadgeHTML(c)).join('');
+scoreEl.textContent=scannedScore+' pts'+(cards.filter(c=>NUM_CARDS.includes(c)).length===7?' ⭐ FLIP 7!':'');
+cardBadgesWrap.style.display='block';
+}
+
+function showManualFallback(){
+document.getElementById('captureWrap').style.display='none';
+document.getElementById('cardBadgesWrap').style.display='none';
+document.getElementById('manualFallback').style.display='block';
+entered='';
+updateDisplay();
+}
+
+function confirmScan(){
+if(scannedScore===null)return;
+// Convert capturedImageBase64 to data URL for storage
+const imgData=capturedImageBase64?('data:image/jpeg;base64,'+capturedImageBase64):null;
+submitScore(scannedScore,scannedCards||[],imgData);
+}
+
+function retryScan(){
+scannedCards=null;scannedScore=null;capturedImageBase64=null;
+document.getElementById('cardBadgesWrap').style.display='none';
+document.getElementById('manualFallback').style.display='none';
+document.getElementById('scanStatus').textContent='Starting camera...';
+document.getElementById('captureWrap').style.display='block';
+initCamera();
+}
+
+/* ─── WIN / UNDO ─── */
 function checkWin(){
-  if(winShown)return;
-  var best=null;
-  players.forEach(function(p){var t=total(p);if(t>=TARGET&&(!best||t>total(best)))best=p;});
-  if(best){
-    winShown=true;playWin();
-    document.documentElement.classList.add('barrel-roll');
-    setTimeout(function(){document.documentElement.classList.remove('barrel-roll');},1500);
-    document.getElementById('winName').textContent=best.name+' WINS!';
-    document.getElementById('winMsg').textContent=total(best)+' points ÃÂÃÂ°ÃÂÃÂÃÂÃÂÃÂÃÂ¥';
-    document.getElementById('winBanner').classList.add('show');
-    confetti();
-  }
+if(winShown)return;
+let best=null;
+players.forEach(p=>{const t=total(p);if(t>=TARGET&&(!best||t>total(best)))best=p;});
+if(best){
+winShown=true;playWin();
+document.documentElement.classList.add('barrel-roll');
+setTimeout(()=>document.documentElement.classList.remove('barrel-roll'),1500);
+document.getElementById('winName').textContent=best.name+' WINS!';
+document.getElementById('winMsg').textContent=total(best)+' points 🔥';
+// Final leaderboard
+const wlb=document.getElementById('winLeaderboard');wlb.innerHTML='';
+const sorted=[...players].map((p,i)=>({p,i})).sort((a,b)=>total(b.p)-total(a.p));
+const maxT=total(sorted[0].p);
+sorted.forEach(({p},rank)=>{
+const t=total(p),row=document.createElement('div');
+row.className='lb-row'+(rank===0?' lb-leader':'');
+row.innerHTML=`<div class="lb-rank">${rank+1}</div><div class="lb-dot" style="background:${p.avatar?'transparent':p.color}">${p.avatar?`<img src="${p.avatar}" alt="">`:p.name[0]}</div><div class="lb-name">${esc(p.name)}</div><div class="lb-score">${t}</div>`;
+wlb.appendChild(row);
+});
+document.getElementById('winBanner').classList.add('show');
+confetti();
+}
 }
 function hideWin(){document.getElementById('winBanner').classList.remove('show');}
 function confetti(){
-  var banner=document.getElementById('winBanner');
-  var emojis=['ÃÂÃÂ°ÃÂÃÂÃÂÃÂÃÂÃÂ','ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ¨','ÃÂÃÂ°ÃÂÃÂÃÂÃÂÃÂÃÂ','ÃÂÃÂ¢ÃÂÃÂ­ÃÂÃÂ','ÃÂÃÂ°ÃÂÃÂÃÂÃÂÃÂÃÂ','ÃÂÃÂ°ÃÂÃÂÃÂÃÂÃÂÃÂ'];
-  for(var i=0;i<40;i++){
-    var s=document.createElement('div');s.className='confetti';
-    s.textContent=emojis[Math.floor(Math.random()*emojis.length)];
-    s.style.left=Math.random()*100+'vw';
-    s.style.animationDuration=2+Math.random()*3+'s';
-    s.style.animationDelay=Math.random()*1.5+'s';
-    banner.appendChild(s);
-    (function(el){setTimeout(function(){el.remove();},6000);})(s);
-  }
+const banner=document.getElementById('winBanner');
+const emojis=['🎉','✨','🎊','⭐','📛','🃏'];
+for(let i=0;i<40;i++){
+const s=document.createElement('div');s.className='confetti';
+s.textContent=emojis[Math.floor(Math.random()*emojis.length)];
+s.style.left=Math.random()*100+'vw';
+s.style.animationDuration=2+Math.random()*3+'s';
+s.style.animationDelay=Math.random()*1.5+'s';
+banner.appendChild(s);setTimeout(()=>s.remove(),6000);
+}
+}
+function undo(){
+if(!history.length)return;
+const i=history.pop();players[i].scores.pop();winShown=false;hideWin();
+// Remove last history entry for this player
+for(let r=roundHistory.length-1;r>=0;r--){
+const entries=roundHistory[r].entries;
+for(let e=entries.length-1;e>=0;e--){
+if(entries[e].playerIdx===i){entries.splice(e,1);if(!entries.length)roundHistory.splice(r,1);break;}
+}
+}
+render();saveState();
+}
+function confirmUndoRound(){
+const r=Math.min(...players.map(p=>p.scores.length));
+if(r===0)return;
+if(confirm('Undo Round '+r+'? This will remove everyone\'s scores from that round so it can be re-entered.'))undoLastRound();
+}
+function undoLastRound(){
+const r=Math.min(...players.map(p=>p.scores.length));
+if(r===0)return;
+players.forEach(p=>{p.scores=p.scores.slice(0,r-1);});
+history=[];winShown=false;hideWin();
+roundHistory=roundHistory.filter(rr=>rr.round<r);
+render();saveState();
 }
 
-// Game controls
-function confirmNewGame(){if(history.length===0||confirm('Start a new game? Scores will be lost.'))newGame();}
-function newGame(){clearSave();hideWin();document.getElementById('game').style.display='none';document.getElementById('setup').style.display='block';}
+/* ─── SETTINGS ─── */
+function openSettings(){
+document.getElementById('settingsKeyInput').value=geminiApiKey;
+document.getElementById('settingsOverlay').classList.add('show');
+}
+function closeSettings(){document.getElementById('settingsOverlay').classList.remove('show');}
+function saveSettings(){
+geminiApiKey=document.getElementById('settingsKeyInput').value.trim();
+try{localStorage.setItem('geminiApiKey',geminiApiKey);}catch(e){}
+closeSettings();
+}
 
-// Save/load
-var SAVE_KEY='flip7_save';
+/* ─── GAME FLOW ─── */
+function confirmNewGame(){if(history.length===0||confirm('Start a new game? Current scores will be lost.'))newGame();}
+function newGame(){clearSave();hideWin();stopCamera();document.getElementById('game').style.display='none';document.getElementById('setup').style.display='block';players=[];history=[];roundHistory=[];winShown=false;}
+const SAVE_KEY='flip7_save';
 function saveState(){
-  if(!players.length)return;
-  try{localStorage.setItem(SAVE_KEY,JSON.stringify({players:players.map(function(p){return{name:p.name,color:p.color,scores:p.scores.slice(),avatar:p.avatar};}),history:history.slice(),winShown:winShown}));}catch(e){}
+if(!players.length)return;
+try{localStorage.setItem(SAVE_KEY,JSON.stringify({
+players:players.map(p=>({name:p.name,color:p.color,scores:[...p.scores],avatar:p.avatar})),
+history:[...history],winShown,
+roundHistory:roundHistory.map(rr=>({round:rr.round,entries:rr.entries.map(e=>({playerIdx:e.playerIdx,score:e.score,cards:e.cards,bust:e.bust,thumb:e.thumb||null}))}))
+}));}catch(e){}
 }
 function clearSave(){try{localStorage.removeItem(SAVE_KEY);}catch(e){}}
 function confirmClearSave(){if(confirm('Clear saved game and return to setup?'))newGame();}
 function loadState(){
-  try{
-    var raw=localStorage.getItem(SAVE_KEY);if(!raw)return;
-    var s=JSON.parse(raw);if(!s.players||!s.players.length)return;
-    players=s.players;history=s.history||[];winShown=s.winShown||false;
-    document.getElementById('setup').style.display='none';
-    document.getElementById('game').style.display='block';
-    render();
-  }catch(e){}
+try{
+const raw=localStorage.getItem(SAVE_KEY);if(!raw)return;
+const s=JSON.parse(raw);if(!s.players||!s.players.length)return;
+players=s.players;history=s.history||[];winShown=s.winShown||false;roundHistory=s.roundHistory||[];
+document.getElementById('setup').style.display='none';
+document.getElementById('game').style.display='block';
+render();
+}catch(e){}
 }
 loadState();
 </script>
